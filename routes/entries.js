@@ -12,22 +12,18 @@ router.get('/', (req, res) => Entry.findAll()
     })
     .catch(err => console.log(err)));
 
-//Add a Entry
+//hardcode an Entry
 router.get('/add', (req, res)=> {
     const data = {
         news: 'And everyday was christmas',
         user: 'S. Claus',
-        createdAt: 'May 2, 2023',
-        updatedAt: 'May 3, 2023'
     }
-    let {news, user, createdAt, updatedAt} = data;
+    let {news, user} = data;
 
     //Insert into Table
     Entry.create({
         news: news,
-        user: user,
-        createdAt: createdAt,
-        updatedAt: updatedAt
+        user: user
     })
         .then(entry => res.redirect('/entries'))
         .catch(err => console.log(err))

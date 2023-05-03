@@ -7,13 +7,7 @@ const Entry = db.define('entry', {
   },
   user: {
     type: Sequelize.STRING
-  },
-  createdAt: {
-    type: Sequelize.STRING
-  },
-  updatedAt: {
-    type: Sequelize.STRING
-  },
+  }
 })
 
 module.exports = Entry;

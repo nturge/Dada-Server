@@ -1,0 +1,31 @@
+{
+  "name": "dada-server",
+  "version": "1.0.0",
+  "description": "simple app for reading and writing dadaist news poems",
+  "main": "app.js",
+  "scripts": {
+    "start": "node: app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nturge/Dada-Server.git"
+  },
+  "author": "Nick Turgeon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nturge/Dada-Server/issues"
+  },
+  "homepage": "https://github.com/nturge/Dada-Server#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7",
+    "pg": "^8.10.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.31.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

@@ -3,6 +3,8 @@ const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const path = require('path');
 
+
+
 //Database
 const db = require('./config/database');
 
@@ -13,7 +15,8 @@ db.authenticate()
 
 const app = express(); 
 
-app.get('/', (req, res) => res.send('INDEX'));
+
+app.get('/', (req, res) =>  res.sendFile(`${__dirname}/www/index.html`));
 
 //Entries routes
 app.use('/entries', require('./routes/entries'));

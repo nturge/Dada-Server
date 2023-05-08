@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const db = require('../config/database');
 
-const Entry = db.define('entry', {
+const News = db.define('news', {
   news: {
     type: Sequelize.STRING
   },
@@ -9,5 +9,4 @@ const Entry = db.define('entry', {
     type: Sequelize.STRING
   }
 })
-
-module.exports = Entry;
+module.exports = News;

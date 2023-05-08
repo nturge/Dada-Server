@@ -1,0 +1,22 @@
+
+<section id="save" class="container">
+    <div class="form-wrap">
+      <h1>Save Entry</h1>
+      {{#each errors}}
+        <div class="error">
+          <p>{{text}}</p>
+        </div>
+      {{/each}}
+      <form action="/entries/save" method="POST">
+        <div class="input-group">
+          <label for="title">user</label>
+          <input type="text" name="user" id="user" class="input-box" placeholder="username"
+            maxlength="100" value={{user}}>
+        </div>
+        <div class="input-group">
+          <textarea name="news" id="news" class="input-box" placeholder="news"
+            rows="10">{{news}}</textarea>
+        </div>
+        <input type="submit" value="Save Entry" class="btn btn-reverse">
+      </form>
+    </div>

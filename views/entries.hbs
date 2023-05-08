@@ -1,0 +1,13 @@
+<section id="entries" class="container">
+    <h1>All Entries</h1>
+
+    {{#each entries}}
+      <div class="news">
+      <h3>{{news}}</h3>
+      <p>{{user}}</p>
+    </div>
+    {{else}}
+      <p>No news available</p>
+    {{/each}}
+    
+  </section>

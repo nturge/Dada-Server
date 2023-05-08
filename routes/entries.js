@@ -6,7 +6,7 @@ const News = require('../models/News');
 // Get News list
 router.get('/', (req, res) => 
   News.findAll()
-    .then(entries => res.render('entries', {
+    .then(entries => res.render('entries', { 
         entries: entries
       }))
     .catch(err => res.render('error', {error: err})));
@@ -43,7 +43,7 @@ router.post('/save', (req, res) => {
       news,
       user,
     })
-      .then(News => res.redirect('/entries'))
+      .then(news => res.redirect('/entries'))
       .catch(err => res.render('error', {error:err.message}))
   }
 });
